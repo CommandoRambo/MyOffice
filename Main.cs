@@ -17,6 +17,9 @@ namespace MyOffice
     {
         #region VARIABLES
 
+        public int UserLevel;
+        public string ConnectionString;
+
         private string _mainRegPath = @"SOFTWARE\JRV Soltuions\My Office";
         private SqlConnection _connection;
         private SqlCommand _command;
@@ -31,28 +34,33 @@ namespace MyOffice
         {
             InitializeComponent();
 
-            ConnectionString = RegistryGetValue("ConnectionString");
-            LastUser = RegistryGetValue("LastUser");
-            InitialRun = Convert.ToBoolean(RegistryGetValue("InitialRun"));
-            UseLogin = Convert.ToBoolean(RegistryGetValue("UseLogin"));
 
-            MessageBox.Show(CheckDatabase().ToString());
-
-            //if (InitialRun)
-            //{
-            //    InitialSetup.CreateDatabase();
-            //}
-
-            //if (UseLogin)
-            //{
-            //    FrmLogin form = new FrmLogin();
-            //    form.ShowDialog();
-            //}
         }
 
         #endregion
 
         #region METHODS
+
+        internal void SetupMainMenuStrip(int userLevel)
+        {
+            ToolStripItem menuItem;
+
+            switch (userLevel)
+            {
+                case 0:     // Disabled
+
+                    break;
+                case 1:     // User
+
+                    break;
+                case 2:     // Admin
+
+                    break;
+                case 3:     // Manager
+
+                    break;
+            }
+        }
 
         private string RegistryGetValue(string keyName)
         {
@@ -105,12 +113,39 @@ namespace MyOffice
         #endregion
 
         #region PROPERTIES
-        public bool InitialRun { get; set; }
-        public bool UseLogin { get; set; }
-        public string ConnectionString { get; set; }
-        public string LastUser { get; set; }
-
 
         #endregion
+
+        #region MAIN MENU STRIP
+        private void mnuPreferences_Click(object sender, EventArgs e)
+        {
+            FrmPreferences form = new FrmPreferences();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void mnuNewClient_Click(object sender, EventArgs e)
+        {
+            FrmNewClients form = new FrmNewClients();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void mnuCalendar_Click(object sender, EventArgs e)
+        {
+            FrmCalendar form = new FrmCalendar();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+private void mnuScanner_Click(object sender, EventArgs e)
+        {
+            FrmScanner form = new FrmScanner();
+            form.MdiParent = this;
+            form.Show();
+        }
+        #endregion
+
+        
     }
 }

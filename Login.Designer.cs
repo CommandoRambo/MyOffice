@@ -106,6 +106,7 @@
             this.butLogin.TabIndex = 3;
             this.butLogin.Text = "Login";
             this.butLogin.UseVisualStyleBackColor = false;
+            this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
             // label2
             // 

@@ -1,10 +1,4 @@
-﻿CREATE TABLE [MyLaptopShop].[dbo].[Settings]
-(
-	[UseLogin] BIT NOT NULL
-)
-
-USE [MyLaptopShop]
-GO
+﻿USE [MyLaptopShop]
 
 CREATE TABLE [dbo].[Users]
 (
@@ -12,9 +6,9 @@ CREATE TABLE [dbo].[Users]
 	[Forename] TEXT NOT NULL, 
 	[Surname] TEXT NOT NULL,
 	[Email] TEXT NULL,
-	[Username] TEXT NOT NULL, 
+	[Username] TEXT NOT NULL UNIQUE, 
 	[Password] TEXT NOT NULL, 
-	[PasswordChange] BIT NOT NULL,
+	[PasswordChange] BIT NOT NULL DEFAULT 1,
 	[PasswordChangeDate] DATE NULL,
 	[Level] INT NOT NULL DEFAULT 0, 
 	[Status] INT NOT NULL DEFAULT 0, 

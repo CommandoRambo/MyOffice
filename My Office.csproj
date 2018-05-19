@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +49,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarDayView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarDayView.Designer.cs">
+      <DependentUpon>CalendarDayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarMonth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarMonth.Designer.cs">
+      <DependentUpon>CalendarMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarMonthView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarMonthView.Designer.cs">
+      <DependentUpon>CalendarMonthView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarWeekView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarWeekView.Designer.cs">
+      <DependentUpon>CalendarWeekView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarYearView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarYearView.Designer.cs">
+      <DependentUpon>CalendarYearView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewClients.Designer.cs">
+      <DependentUpon>NewClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInventory.Designer.cs">
+      <DependentUpon>NewInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +109,52 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner.Designer.cs">
+      <DependentUpon>Scanner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalendarDayView.resx">
+      <DependentUpon>CalendarDayView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalendarMonth.resx">
+      <DependentUpon>CalendarMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalendarMonthView.resx">
+      <DependentUpon>CalendarMonthView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalendarWeekView.resx">
+      <DependentUpon>CalendarWeekView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalendarYearView.resx">
+      <DependentUpon>CalendarYearView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewClients.resx">
+      <DependentUpon>NewClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewInventory.resx">
+      <DependentUpon>NewInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +166,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Scanner.resx">
+      <DependentUpon>Scanner.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,6 +190,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SQL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

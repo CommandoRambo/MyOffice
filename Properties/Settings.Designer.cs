@@ -25,52 +25,61 @@ namespace MyOffice.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool InitialRun {
+        [global::System.Configuration.DefaultSettingValueAttribute("11, 148, 68")]
+        public global::System.Drawing.Color BaseGreen {
             get {
-                return ((bool)(this["InitialRun"]));
+                return ((global::System.Drawing.Color)(this["BaseGreen"]));
             }
             set {
-                this["InitialRun"] = value;
+                this["BaseGreen"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool UseLogin {
+        [global::System.Configuration.DefaultSettingValueAttribute("1, 121, 50")]
+        public global::System.Drawing.Color DarkGreen {
             get {
-                return ((bool)(this["UseLogin"]));
+                return ((global::System.Drawing.Color)(this["DarkGreen"]));
             }
             set {
-                this["UseLogin"] = value;
+                this["DarkGreen"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LastUser {
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 92, 37")]
+        public global::System.Drawing.Color DarkerGreen {
             get {
-                return ((string)(this["LastUser"]));
+                return ((global::System.Drawing.Color)(this["DarkerGreen"]));
             }
             set {
-                this["LastUser"] = value;
+                this["DarkerGreen"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LEANNE\\SQLSERVER2016; Initial Catalog=MyLaptopShop; Integrated Securi" +
-            "ty=True; Connect Timeout=30; Encrypt=False; TrustServerCertificate=True; Applica" +
-            "tionIntent=ReadWrite; MultiSubnetFailover=False; User Id = Admin; Password=Admin" +
-            ";")]
-        public string ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("37, 169, 90")]
+        public global::System.Drawing.Color LightGreen {
             get {
-                return ((string)(this["ConnectionString"]));
+                return ((global::System.Drawing.Color)(this["LightGreen"]));
             }
             set {
-                this["ConnectionString"] = value;
+                this["LightGreen"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("70, 183, 116")]
+        public global::System.Drawing.Color LighterGreen {
+            get {
+                return ((global::System.Drawing.Color)(this["LighterGreen"]));
+            }
+            set {
+                this["LighterGreen"] = value;
             }
         }
     }

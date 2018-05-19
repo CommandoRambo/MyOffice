@@ -2,17 +2,20 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MyOffice.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="InitialRun" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+    <Setting Name="BaseGreen" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">11, 148, 68</Value>
     </Setting>
-    <Setting Name="UseLogin" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+    <Setting Name="DarkGreen" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">1, 121, 50</Value>
     </Setting>
-    <Setting Name="LastUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="DarkerGreen" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 92, 37</Value>
     </Setting>
-    <Setting Name="ConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=LEANNE\SQLSERVER2016; Initial Catalog=MyLaptopShop; Integrated Security=True; Connect Timeout=30; Encrypt=False; TrustServerCertificate=True; ApplicationIntent=ReadWrite; MultiSubnetFailover=False; User Id = Admin; Password=Admin;</Value>
+    <Setting Name="LightGreen" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">37, 169, 90</Value>
+    </Setting>
+    <Setting Name="LighterGreen" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">70, 183, 116</Value>
     </Setting>
   </Settings>
 </SettingsFile>
